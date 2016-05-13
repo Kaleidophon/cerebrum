@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from neural.cerebrum import Input
+from neural.neuron import Input
 
 
 def draw_network(neurons, connections):

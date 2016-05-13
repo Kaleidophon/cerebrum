@@ -18,23 +18,3 @@ class Cerebrum(object):
         print "\nStart brain!"
         for output_neuron in self.outputs:
             print output_neuron.compute_activation()
-
-
-class Input(object):
-
-    def __init__(self, id, x_i):
-        self.id = id
-        self.x_i = x_i
-        self.incoming = None
-
-    def compute_activation(self):
-        return self.x_i
-
-    def is_output(self):
-        return False
-
-    def init_weights(self):
-        pass
-
-    def get_id(self):
-        return self.id

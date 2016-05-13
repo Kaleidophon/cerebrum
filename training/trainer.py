@@ -1,5 +1,5 @@
-from neural.neuron import Neuron
-from neural.cerebrum import Cerebrum, Input
+from neural.neuron import Neuron, Input
+from neural.cerebrum import Cerebrum
 import numpy as np
 
 
