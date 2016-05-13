@@ -38,3 +38,6 @@ class Neuron(object):
     def is_output(self):
         return self.output
 
+    def get_id(self):
+        return self.id
+

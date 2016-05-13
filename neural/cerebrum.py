@@ -6,9 +6,10 @@ class Cerebrum(object):
         self.outputs = [neuron for neuron in neurons if neuron.is_output()]
 
         print "Connections:"
-        for (start, end) in connections.items():
-            print "%i - %i" %(start, end)
-            neurons[end].add_incoming(neurons[start])
+        for (neur, incoming) in connections.items():
+            print "{%s} -> %i" % (", ".join([str(n) for n in incoming]), neur)
+            for inc in incoming:
+                neurons[neur].add_incoming(neurons[inc])
 
         for neuron in neurons:
             neuron.init_weights()
@@ -34,3 +35,6 @@ class Input(object):
 
     def init_weights(self):
         pass
+
+    def get_id(self):
+        return self.id
